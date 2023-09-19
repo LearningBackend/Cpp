@@ -1,0 +1,23 @@
+int Sum(int a, int b)
+{
+	return a + b;
+}
+
+double Sum(double a, double b)
+{
+	return a + b;
+}
+
+Ось це і є перезагрузка, тобто ми можемо вписати як цілі числа так і дробні.
+
+void main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	cout << Sum(2,4) << endl;
+	cout << Sum(2.8, 3.6) << endl;
+
+}
+
+Ну якось так

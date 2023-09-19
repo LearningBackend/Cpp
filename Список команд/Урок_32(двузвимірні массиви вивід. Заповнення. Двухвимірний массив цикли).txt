@@ -1,0 +1,25 @@
+Отже щоб заповнит ичислами двухвимірний массив потрібно:
+const short ROWS = 5;
+const short COLS = 8;
+
+short arr[ROWS][COLS];
+
+for (short i = 0; i < ROWS; i++)
+{
+	for (short j = 0; j < COLS; j++)
+	{
+		arr[i][j] = rand() % 10;
+	}
+}
+
+Вивід массиву: 
+
+for (short i = 0; i < ROWS; i++) // вивід рядка
+	{
+		for (short j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << "\t";
+		} // цей цикл перечислює всі колонки через табуляцію
+		cout << endl; // це організовує перехід на новий рядок
+		
+	}

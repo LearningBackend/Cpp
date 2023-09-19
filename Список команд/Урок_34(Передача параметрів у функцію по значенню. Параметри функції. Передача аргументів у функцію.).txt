@@ -1,0 +1,38 @@
+void Foo(short a)
+{
+	a++;
+}
+
+void main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	short a = 1;
+
+	Foo(a);
+
+	cout << a << endl;
+}
+в цьому коді виведеться 1, а не 2 як я думав, тому що це 2 різних значення які ми передаєм у функцію
+////////////////////////////
+для того щоб вивело що наше значення збільшилось на один треба:
+short Foo(short a)
+{
+	return ++a;
+}
+
+void main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	short value = 1;
+
+	value = Foo(value);
+
+	cout << value << endl;
+}
+
+alue = Foo(value) та ЗРОБИТИ ПРЕФІКСНИЙ ІНКРЕМЕНТ return ++a; тому що ПОСТФІКСНИЙ  має менший приорітет, тобто з цього випливає що спочатку повернувся би return і тільки потім значення а збільшилось би на 1
+

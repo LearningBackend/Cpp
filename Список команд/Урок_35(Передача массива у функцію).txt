@@ -1,0 +1,68 @@
+void fillArray(short arr[], const short size)
+{
+	for (short i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+}
+
+void PrintArray(short arr[], const short size)
+{
+	for (short i = 0; i < size; i++)
+	{
+		cout << arr[i] << endl;
+	}
+}
+
+void main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	const short SIZE = 10;
+	short arr[SIZE];
+
+	fillArray(arr, SIZE);	
+	PrintArray(arr, SIZE);
+}
+fillarray - заповнює массив рандом числами
+printArray - виводимо елементи массиву
+
+Адреса массиву що у функції main що у fillarray однакова.
+
+///////////
+void fillArray(short arr[], const short size)
+{
+	short a = sizeof(arr);
+	for (short i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+}
+
+void PrintArray(short arr[], const short size)
+{
+	for (short i = 0; i < size; i++)
+	{
+		cout << arr[i] << endl;
+	}
+}
+
+void main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	const short SIZE = 10;
+	short massiv[SIZE];
+
+	short a = sizeof(massiv);
+
+	fillArray(massiv, SIZE);
+	PrintArray(massiv, SIZE);
+
+
+}
+short a = sizeof(massiv); - тут 20 байтів тому що у нас 10 елементів по 2 байта, ми тут як би їх вказали
+
+short a = sizeof(arr); - а тут всього 2 байта тому що ми створили так скажем ярлик на массив в якому ми вписуєм рандом числа.

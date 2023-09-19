@@ -1,0 +1,26 @@
+
+// #define DEBUG
+
+#ifdef DEBUG 
+	cout << "Початок циклу" << endl;
+#endif 
+	for (int i = 0; i < 4; i++)
+	{
+		cout << i << endl;
+	}
+
+#ifdef DEBUG
+	cout << "Кінець циклу" << endl;
+#endif
+
+
+Тут коли ставимо // то спрацьовує інша частина ifdef
+// #define DEBUG
+
+#ifdef DEBUG
+	cout << "Дебаг знайденний" << endl;
+#else
+	cout << "Дебаг НЕ знайденний" << endl;
+#endif // DEBUG
+
+

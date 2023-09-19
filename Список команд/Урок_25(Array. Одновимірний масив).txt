@@ -1,0 +1,15 @@
+Масив Array:
+
+short arr[4];
+arr[0] = 5;
+and too
+
+Array we can write a different order.
+
+short arr[4];
+arr[3] = 324;	
+arr[0] = 5;
+arr[2] = 10;
+arr[1] = 7;
+
+	

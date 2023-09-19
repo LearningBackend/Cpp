@@ -1,0 +1,67 @@
+Код за допмогою посилань   зробленний
+void Swap(int & a, int & b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+void main()
+{
+
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	//написати ШАБЛОННУ функцію, яка міняє місцями значення 2-х змінних за допомогою ПОСИЛАННЯ.
+
+	int a = 10;
+	int b = 2;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	
+
+	cout << "======" << endl;
+	cout << " Swap "<< endl;
+	cout << "======"<< endl;
+
+
+	Swap(a, b);
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+
+}
+////////////////////////////////////////////////////////////////
+Шаблонна функція з посиланнями
+
+template<typename T>
+void Swap(T & a, T & b)
+{
+	T temp = a;
+	a = b;
+	b = T temp;
+}
+
+void main()
+{
+
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	//написати ШАБЛОННУ функцію, яка міняє місцями значення 2-х змінних за допомогою ПОСИЛАННЯ.
+
+	string a = "Hi";
+	string b = "Bye";
+
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+
+	cout << "======" << endl;
+	cout << " Swap "<< endl;
+	cout << "======"<< endl;
+
+	Swap(a, b);
+
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+
+}
